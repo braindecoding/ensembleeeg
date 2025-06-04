@@ -1,0 +1,22 @@
+\begin{table}
+\caption{Dataset characteristics and experimental setup for EEG-based digit classification.}
+\label{tab:dataset_characteristics}
+\begin{tabular}{l|l|p{6cm}}
+\toprule
+Characteristic & Value & Description \\
+\midrule
+Dataset Source & MindBigData EPOC v1.0 & Open-source brain signal database \\
+EEG Device & Emotiv EPOC (Commercial) & Non-medical grade EEG headset \\
+Number of Channels & 14 & AF3, F7, F3, FC5, T7, P7, O1, O2, P8, T8, FC6, F4, F8, AF4 \\
+Sampling Rate & ~128 Hz & Theoretical 128Hz, actual varies \\
+Signal Duration & 2 seconds & Fixed duration per trial \\
+Number of Subjects & 1 (David Vivancos) & Single subject reduces inter-subject variability \\
+Total Samples & 1,000 & Balanced binary classification dataset \\
+Digit 6 Samples & 500 & Mental imagery of digit 6 \\
+Digit 9 Samples & 500 & Mental imagery of digit 9 \\
+Data Collection Period & 2014-2015 & Nearly 2-year data collection \\
+Stimulus Type & Visual + Mental Imagery & Subject sees digit then thinks about it \\
+Data Format & Raw amplitude values & No post-processing by MindBigData \\
+\bottomrule
+\end{tabular}
+\end{table}

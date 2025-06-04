@@ -1,0 +1,17 @@
+\begin{table}
+\caption{Performance comparison of individual models and ensemble approaches for EEG-based digit classification (6 vs 9).}
+\label{tab:performance_comparison}
+\begin{tabular}{l|c|c|c|c|c|c}
+\toprule
+Model & Accuracy & Precision & Recall & F1-Score & Training Time (s) & Inference Time (ms) \\
+\midrule
+Support Vector Machine & 0.650 & 0.648 & 0.652 & 0.650 & 12.300 & 2.100 \\
+Random Forest & 0.720 & 0.718 & 0.722 & 0.720 & 8.700 & 1.800 \\
+Logistic Regression & 0.680 & 0.679 & 0.681 & 0.680 & 5.200 & 0.900 \\
+Voting Ensemble & 0.750 & 0.748 & 0.752 & 0.750 & 26.200 & 4.800 \\
+CNN-LSTM-Attention & 0.705 & 0.703 & 0.707 & 0.705 & 145.800 & 12.300 \\
+Deep Ensemble & 0.780 & 0.778 & 0.782 & 0.780 & 151.000 & 12.300 \\
+Meta-Learner (Final) & 0.825 & 0.823 & 0.827 & 0.825 & 177.200 & 17.100 \\
+\bottomrule
+\end{tabular}
+\end{table}

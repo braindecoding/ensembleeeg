@@ -225,22 +225,17 @@ class HybridCNNLSTMAttention(nn.Module):
         # CNN feature extraction
         x = F.elu(self.bn1(self.conv1(x)))
         x = self.pool1(x)
-        print(f"After pool1: {x.shape}")
 
         x = F.elu(self.bn2(self.conv2(x)))
         x = self.pool2(x)
-        print(f"After pool2: {x.shape}")
 
         x = F.elu(self.bn3(self.conv3(x)))
         x = self.pool3(x)
-        print(f"After pool3: {x.shape}")
 
         # Reshape for LSTM
         batch_size = x.size(0)
         seq_len = x.size(3)  # This is the sequence length
         features = x.size(1)  # Number of features
-
-        print(f"Reshaping from {x.shape} to [batch_size={batch_size}, seq_len={seq_len}, features={features}]")
 
         # Reshape to [batch_size, seq_len, features]
         x = x.view(batch_size, seq_len, features)
@@ -278,7 +273,7 @@ def train_model(model, train_loader, val_loader, num_epochs=100, weight_decay=1e
     # Loss function and optimizer with weight decay (L2 regularization)
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=0.0005, weight_decay=weight_decay)
-    scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.5, patience=5, verbose=True)
+    scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='min', factor=0.5, patience=5)
 
     # Training loop
     train_losses = []

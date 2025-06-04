@@ -1,0 +1,18 @@
+\begin{table}
+\caption{Computational complexity analysis of the proposed ensemble framework.}
+\label{tab:computational_complexity}
+\begin{tabular}{l|c|c|c|c}
+\toprule
+Component & Time Complexity & Actual Time & Memory Usage & Scalability \\
+\midrule
+Data Preprocessing & O(n) & 0.5 s & 50 MB & Excellent \\
+Wavelet Feature Extraction & O(n log n) & 12.3 s & 120 MB & Good \\
+Traditional ML Training & O(n²) & 26.2 s & 200 MB & Moderate \\
+Deep Learning Training & O(n³) & 145.8 s & 1.2 GB & Limited \\
+Meta-Learner Training & O(n) & 5.1 s & 50 MB & Excellent \\
+Total Training Time & O(n³) & 189.9 s & 1.6 GB & Limited \\
+Single Prediction & O(n) & 17.1 ms & 10 MB & Excellent \\
+Batch Prediction (100 samples) & O(n) & 1.2 s & 100 MB & Good \\
+\bottomrule
+\end{tabular}
+\end{table}

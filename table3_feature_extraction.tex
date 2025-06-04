@@ -1,0 +1,16 @@
+\begin{table}
+\caption{Wavelet-based feature extraction methods and their characteristics.}
+\label{tab:feature_extraction}
+\begin{tabular}{l|l|c|c|p{3cm}}
+\toprule
+Feature Category & Method & Features per Channel & Total Features & Frequency Bands \\
+\midrule
+Discrete Wavelet Transform (DWT) & Daubechies-4, 4 levels & 14 & 196 & Delta, Theta, Alpha, Beta \\
+Wavelet Packet Decomposition (WPD) & Complete binary tree decomposition & 16 & 224 & Sub-band decomposition \\
+Continuous Wavelet Transform (CWT) & Morlet wavelet, 32 scales & 32 & 448 & Continuous 1-32 Hz \\
+Cross-Channel Coherence & Magnitude squared coherence & N/A & 91 & Delta, Theta, Alpha, Beta, Gamma \\
+Regional Brain Features & Frontal, parietal, occipital grouping & N/A & 42 & Band-specific regional analysis \\
+Statistical Features & Mean, std, skewness, kurtosis & 4 & 56 & Time-domain only \\
+\bottomrule
+\end{tabular}
+\end{table}
