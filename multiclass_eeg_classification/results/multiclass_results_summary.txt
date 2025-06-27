@@ -1,0 +1,18 @@
+Multi-class EEG Classification Results
+==================================================
+
+Traditional ML:
+  Hierarchical Ensemble: 0.565
+  Confidence Ensemble: 0.900
+
+Deep Learning:
+  CNN-LSTM-Attention: 0.100
+
+Baseline:
+  Random: 0.100
+
+Key Findings:
+- Multi-class classification is significantly more challenging
+- Best accuracy achieved: 0.900
+- Confidence distributions are more realistic (lower)
+- Hierarchical approaches show promise

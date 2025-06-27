@@ -325,3 +325,45 @@ Proyek ini juga menghasilkan 5 table dalam format LaTeX yang siap untuk publikas
 - **Format**: LaTeX (.tex files)
 - **Konten**: Performance, dataset, methods, literature, complexity
 - **Kompatibilitas**: IEEE, ACM, Elsevier, Springer journals
+
+## 🚀 Multi-Class EEG Classification Project
+
+Sebagai pengembangan lanjutan, telah dibuat **proyek multi-class classification** dalam folder terpisah untuk artikel jurnal kedua:
+
+### 📁 Proyek Multi-Class
+**Lokasi**: `multiclass_eeg_classification/`
+
+**Tujuan**: Mengembangkan klasifikasi dari binary (6 vs 9) menjadi full 10-digit classification (0-9)
+
+### 🎯 Key Features Multi-Class
+- **Hierarchical Ensemble**: Pendekatan hierarkis untuk mengurangi kompleksitas
+- **Confidence-Based Voting**: Ensemble berdasarkan uncertainty
+- **Advanced Deep Learning**: CNN-LSTM-Attention untuk 10 kelas
+- **Scalability Analysis**: Systematic study dari binary ke multi-class
+
+### 📊 Expected Performance
+- **Target Accuracy**: 35-45% (vs 10% random baseline)
+- **Literature Benchmark**: 40% (Spampinato et al., 2017)
+- **Confidence Distribution**: Realistis (mean ~0.4)
+- **Novel Contributions**: Hierarchical framework + attention mechanisms
+
+### 🔬 Research Questions
+1. Bagaimana kompleksitas klasifikasi berubah dengan jumlah kelas?
+2. Digit mana yang paling/kurang dapat dibedakan dalam sinyal EEG?
+3. Apakah pendekatan hierarkis dapat meningkatkan performa?
+4. Bagaimana peran attention mechanism dalam klasifikasi EEG multi-class?
+
+### 📝 Publication Plan
+- **Target Journal**: IEEE Transactions on Neural Systems and Rehabilitation Engineering
+- **Timeline**: 3-4 bulan
+- **Expected Impact**: Foundation untuk practical multi-class BCI systems
+
+### 🚀 Getting Started Multi-Class
+```bash
+cd multiclass_eeg_classification/src
+python demo_multiclass.py                    # Demo dengan synthetic data
+python multiclass_data_loader.py            # Load real EEG data
+python run_multiclass_experiment.py         # Full experiment
+```
+
+**Dokumentasi Lengkap**: Lihat `multiclass_eeg_classification/README.md` dan `MULTICLASS_PROJECT_SUMMARY.md`
